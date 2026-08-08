@@ -15,6 +15,8 @@
 sed -i 's/192.168.1.1/192.168.10.12/g' package/base-files/files/bin/config_generate
 
 # 移除要替换的包
+rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/applications/luci-app-argon-config
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall2
 rm -rf feeds/luci/applications/luci-app-openclash
@@ -25,6 +27,10 @@ rm -rf feeds/packages/net/sing-box
 rm -rf feeds/packages/net/xray-core
 rm -rf feeds/packages/net/lucky
 rm -rf feeds/packages/utils/coremark
+
+# argon 主题
+git clone --depth=1 -b 18.06 https://github.com/hza81007155/luci-theme-argon package/luci-theme-argon
+git clone --depth=1 -b 18.06 https://github.com/hza81007155/luci-app-argon-config package/luci-app-argon-config
 
 # 设置默认主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-light/Makefile

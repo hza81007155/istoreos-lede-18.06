@@ -23,6 +23,8 @@ rm -rf feeds/luci/applications/luci-app-openclash
 rm -rf feeds/luci/applications/luci-app-lucky
 rm -rf feeds/luci/applications/luci-app-wol
 rm -rf feeds/luci/applications/luci-app-vlmcsd
+rm -rf feeds/luci/applications/luci-app-accesscontrol
+rm -rf feeds/luci/applications/luci-app-MosDNS
 rm -rf feeds/packages/net/chinadns-ng
 rm -rf feeds/packages/net/geoview
 rm -rf feeds/packages/net/sing-box
